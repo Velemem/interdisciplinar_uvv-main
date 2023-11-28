@@ -1,0 +1,93 @@
+@import url("../components/drawer.css");
+@import url("../components/header.css");
+@import url("../components/post.css");
+@import url("variables.css");
+
+#container {
+    display: flex;
+    width: 100%;
+}
+
+#left-content {
+    width: 330px;
+}
+
+#rigth-content {
+    padding: 1rem;
+}
+
+.default-button {
+    padding: 10px 16px;
+    background-color: var(--secondary);
+    color: var(--white);
+    border-radius: 5px;
+    width: max-content;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    transition: all 0.3s cubic-bezier(0, 0, 0.5, 1) 0s;
+}
+
+.default-button:hover{
+    font-size: 14.5px;
+}
+
+input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    margin-right: 0.5rem;
+}
+.default-input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.comment-list {
+    margin-top: 2rem;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .comment {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .user-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .username {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .comment-text {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+    width: 90%;
+  }
+@media (max-width:768px) {
+    #container {
+        flex-direction: column;
+    }
+
+    #left-content {
+        width: auto;
+    }
+}
