@@ -1,0 +1,86 @@
+
+.checkbox-content {
+    display: flex;
+    width: fit-content;
+    align-items: center;   
+}
+
+.post-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 320px;
+    color:var(--black);
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    
+    background-color: rgb(255, 255, 255);
+    border-radius: 18px;
+    margin: 1rem;
+    padding-bottom: 1rem;
+    white-space: normal;
+    box-shadow: rgba(0, 0, 0, 0.08) 2px 4px 12px;
+    transition: all 0.3s cubic-bezier(0, 0, 0.5, 1) 0s;
+}
+
+.post-image{
+    width: 320px;
+    height: 240px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    transition: all 0.3s cubic-bezier(0, 0, 0.5, 1) 0s;
+}
+.post-image:hover{
+  height: 260px;
+  
+}
+.post-data-container{
+    width: 100%;
+}
+.post-username{
+    font-size: var(--lg1-font);
+    font-weight: 500;
+}
+.post-description{
+    font-weight: 300;
+    font-size: var(--sm2-font);
+}
+.post-date{
+    font-weight: 300;
+}
+
+.instagram-bar {
+    width:320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .icon-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .icon-button i {
+    margin: 0.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .icon-button span {
+    font-size: 3rem;
+    color: #333;
+  }
+
+  #instagram-bar-left-content{
+    display: flex;
+  }
+
+  @media(max-width:320px){
+    .post-content{
+        width: 300px;
+    }
+  }
