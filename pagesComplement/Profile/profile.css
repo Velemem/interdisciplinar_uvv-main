@@ -1,0 +1,120 @@
+@import url("../../styles/variables.css");
+
+
+#left-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+#profile-image {
+    width: 240px
+}
+#profile-name{
+    margin-top: 1rem;
+}
+
+.default-button{
+    margin-top: 1rem;
+}
+
+#profile-description{
+    width: 240px;
+    height: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-align: inherit;
+    font-weight: 300;
+}
+
+#rigth-content{
+    display: flex;
+    flex-direction: column;
+}
+
+#content-top{
+    display: flex;
+}
+
+.followers-content{
+    margin-left:0.5rem
+}
+
+.followers-value{
+    font-weight: 300;
+}
+
+.tab-navigation {
+    margin: 2rem 0rem;
+    display: flex;
+  }
+  
+  .tab-button {
+    padding: 10px 20px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin-right: 1rem;
+    font-size: 1rem;
+  }
+  
+  .tab-button.active {
+    background-color: #aaa;
+  }
+  
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  .tab-title{
+    margin-bottom:1rem;
+  }
+
+  .yours-images{
+    width: 20rem;
+    height: 20rem;
+  }
+
+@media(max-width:768px) {
+    #left-content {
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+    }
+    #rigth-content {
+        justify-content: center;
+        align-items: start;
+        margin-top: 3rem;
+        width: 80vw;
+    }
+
+    #profile-image {
+        width: 80vw;
+    }
+    #profile-description{
+        width: 80vw;
+        height: auto;
+    }
+
+    #container{
+        align-items: center;
+    }
+
+    .yours-images{
+        width: 15rem;
+        height: 15rem;
+      }
+}
+
+@media(max-width:425px) {
+    .yours-images{
+        width: 20rem;
+        height: 20rem;
+      }
+}
