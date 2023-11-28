@@ -1,0 +1,19 @@
+:root {
+    /* Variáveis das cores */
+    --primary: #00D480;
+    --secondary: #07438C;
+    --text-color: #495057;
+    --gray: #CECECE;
+    --black: #000000;
+    --background: #F3F3F9;
+    --white: #FFFFFF;
+    --red: #FE0135;
+
+    /* Tamanho das Fontes */
+    --sm1-font: 0.833rem;
+    --sm2-font: 1rem;
+    --md1-font: 1.2rem;
+    --md2-font: 1.44rem;
+    --lg3-font: 1.728rem;
+    --lg3-font: 2.072rem;
+}
