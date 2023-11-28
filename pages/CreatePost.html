@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../pagesComplement/CreatePost/create-post.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,500;0,700;1,100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Nova Publicação</title>
+    <script src="../../components/component.js" type="module"></script>
+    <script src="../pagesComplement/CreatePost/index.js" type="module"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+    <script>
+        function atribuirURL() {
+            var url = document.getElementById('url').value;
+            var imagem = document.getElementById('image-element');
+            imagem.src = url;
+            imagem.style.display = 'flex';
+            var inputContent = document.getElementById('input-content')
+            inputContent.style.display = 'none';
+        }
+        function exibirErro() {
+            var imagem = document.getElementById('image-element');
+            imagem.src = '';
+            imagem.style.display = 'none';
+            var inputContent = document.getElementById('input-content')
+            inputContent.style.display = 'flex';
+        }
+        function addNewPost(post) {
+            let storageArray = JSON.parse(window.localStorage.getItem('posts'));
+            storageArray.push(post)
+            window.localStorage.setItem('posts', JSON.stringify(storageArray));
+            window.location.href = 'Home.html'
+        }
+        function submitForm() {
+            var imagem = document.getElementById('image-element');
+            var description = document.getElementById('description-input');
+            if (!description.value) {
+                alert('Adicione uma descrição')
+                return;
+            }
+            if (!imagem.src) {
+                alert('Adicione uma URL válida')
+                return;
+            }
+            addNewPost({ image: imagem.src, description: description.value, date: 1, username: 'Gabriel Medina' })
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="top-container">
+    </div>
+    <div id="container">
+        <div id="left-content">
+        </div>
+        <div id="rigth-content">
+            <h2>Criar Publicação</h2>
+            <div class="form-container">
+                <section>
+                    <div class='image-container'>
+                        <img id="image-element" onerror="exibirErro()" />
+                        <section class="input-content" id="input-content">
+                            <label for="fname">Adicione a URL da imagem</label>
+                            <input class="default-input" type="url" id="url" name="url" placeholder="Url da Imagem">
+                            <button class="default-button" type="button" onclick="atribuirURL()">Adicionar
+                                imagem</button>
+                        </section>
+                    </div>
+                </section>
+                <section class='input-container'>
+                    <label for="fname">Adicione uma descrição</label>
+                    <textarea type="text" class="default-input" id="description-input"
+                        placeholder="Insira uma descrição" rows="4" cols="50"></textarea>
+                    <button class="default-button" type="submit" onclick="submitForm()">Criar Publicação</button>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

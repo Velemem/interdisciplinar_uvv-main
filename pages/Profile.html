@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../pagesComplement/Profile/profile.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,500;0,700;1,100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Profile</title>
+    <script src="../../components/component.js" type="module"></script>
+    <script src="../pagesComplement/Profile/index.js" type="module"></script>
+</head>
+<body>
+    <div id="top-container">
+    </div>
+    <div id="container">
+        <div id="left-content">
+            <img id="profile-image" alt="Imagem de Perfil"
+                src="https://pbs.twimg.com/profile_images/750391781901164545/xA8M-3pB_400x400.jpg">
+            <h3 id="profile-name">Gabriel Medina</h3>
+            <p id="profile-description">
+                Gabriel Medina, nascido em 22 de dezembro de 1993 em São Sebastião, Brasil, é um renomado surfista
+                profissional brasileiro. Ele é amplamente reconhecido como um dos melhores surfistas do mundo e é
+                conhecido por sua habilidade técnica, estilo inovador e determinação competitiva.
+            </p>
+            <a href="CreatePost.html"><button class="default-button">Criar publicação</button></a>
+        </div>
+        <div id="rigth-content">
+            <div id="content-top">
+                <h4 class="followers-content">Seguidores: <span class="followers-value">1500</span></h4>
+                <h4 class="followers-content">Seguindo: <span class="followers-value">200</span></h4>
+            </div>
+            <div class="tab-container">
+            <div class="tab-navigation">
+                <button class="tab-button active" data-tab="tab1">Respostas</button>
+                <button class="tab-button" data-tab="tab2">Imagens</button>
+                <button class="tab-button" data-tab="tab3">Vídeos</button>
+              </div>
+              <div class="tab-content" id="tab1">
+                <h2 class="tab-title">Respostas</h2>
+                <div class="comment-list">
+                    <div class="comment">
+                      <img class="user-avatar" src="https://conteudo.imguol.com.br/c/esporte/dd/2023/02/09/kelly-slater-surfista-americano-1675962742370_v2_1x1.jpg" alt="User Avatar">
+                      <div class="comment-content">
+                        <h4 class="username">Kelly Slater</h4>
+                        <p class="comment-text">Adorei essa foto! As cores estão incríveis. 😍</p>
+                      </div>
+                    </div>
+                    <div class="comment">
+                      <img class="user-avatar" src="https://i.discogs.com/sgSLhUkz57DDiBd1RC5Xjv_m0xTEEJvWWwT1E5XDcsk/rs:fit/g:sm/q:90/h:480/w:443/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQwOTY3/MC0xNDUwMzkyNzQ0/LTEwMDcuanBlZw.jpeg" alt="User Avatar">
+                      <div class="comment-content">
+                        <h4 class="username">Rob Machado</h4>
+                        <p class="comment-text">Que vista maravilhosa! Dá vontade de estar lá. 🌅</p>
+                      </div>
+                    </div>
+              </div>
+              </div>
+              <div class="tab-content" id="tab2">
+                <h2 class="tab-title">Imagens</h2>
+                <img class="yours-images" alt="Imagem de Perfil"
+                src="https://s2.glbimg.com/jtOPK8RbOcDUaR-OasGgM55ZpxU=/0x0:5169x3446/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2019/Y/3/hzPGgFQHuSUBJMc8AOAQ/bn-gabriel-medina-praia-da-barra-64.jpg">
+                <img class="yours-images" alt="Imagem de Perfil"
+                src="https://braziljournal.com/wp-content/uploads/2022/06/medina-1.jpg">
+                <img class="yours-images" alt="Imagem de Perfil"
+                src="https://static-wp-tor15-prd.torcedores.com/wp-content/uploads/2018/12/gabriel-medina.jpg">
+                <img class="yours-images" alt="Imagem de Perfil"
+                src="https://www.waves.com.br/wp-content/uploads/2023/05/Gabriel-Medina_23SurfRanch_A50I9187_Aaron-Hughes.jpg">
+                <img class="yours-images" alt="Imagem de Perfil"
+                src="https://lncimg.lance.com.br/cdn-cgi/image/width=3840,height=undefined,quality=75/uploads/2022/11/07/63695fe58d58c.jpeg">
+              </div>
+              
+              <div class="tab-content" id="tab3">
+                <h2 class="tab-title">Vídeos</h2>
+                <p>Você não publicou nenhum vídeo</p>
+              </div>
+              
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
