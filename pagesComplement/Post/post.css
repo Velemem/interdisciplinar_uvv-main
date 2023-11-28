@@ -1,0 +1,68 @@
+@import url("../../styles/variables.css"); 
+
+#post-container {
+    margin: 2rem 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.post-content-image{
+    width: 480px;
+    height: 480px;
+}
+
+.instagram-bar {
+    width:100%;
+}
+
+.post-data-content{
+    width: 100%;
+    margin-left: 3rem;
+
+}
+
+.post-user-content{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.post-description{
+    font-weight: 300;
+    display: inline-table;
+    margin-top: 0.5rem;
+    padding: 0.7rem;
+    border-radius: 5px;
+    border: 1px var(--secondary) solid;
+}
+
+#user-logo{
+    font-size: 6vw;
+    color: var(--secondary);
+    margin-right: 1rem;
+}
+
+
+@media(max-width: 1150px){
+    #post-container {
+        flex-direction: column;
+    }
+    .post-data-content{
+        max-width: 480px;
+        margin-left: 0px;
+    }
+    #user-logo{
+        font-size: 3rem;
+    }
+    .instagram-bar {
+        max-width:480px;
+    }
+}
+
+@media(max-width: 560px){
+    .post-content-image{
+        width: 90vw;
+        height: 90vw;
+    }
+}
